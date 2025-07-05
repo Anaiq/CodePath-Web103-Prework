@@ -1,15 +1,16 @@
 import React from "react";
+import { cardStyle } from "./ContentCreatorCard.styles";
 
-export const ContentCreatorCard = ({ name, URL, description, imageURL }) => {
+export const ContentCreatorCard = ({ name, url, description, imageURL }) => {
 return (
     <>
-        <div className="content-creator-card container">
+        <div style={cardStyle} className="content-creator-card-container">
             <article>
             <header>{name}</header>
-                <hgroup>
+                <div>
                     <h4>{description}</h4>
-                    <p>{URL}</p>
-                </hgroup>
+                    <p><a href={url} target="_blank" >{url}</a></p>
+                </div>
             
 
             <footer>
